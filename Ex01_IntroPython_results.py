@@ -244,3 +244,20 @@ print(p.split("/"))
 print('\n====== Raw strings for dealing with backslashes ======')
 print(r'd:\work\soil.shp')
 print("Jerry's Kids")
+
+'''
+======================== 1.5 Logical Operators & Boolean Variables =================================
+'''
+print("\n======= 1.5 Logical Operators & Boolean Variables =======")
+x = 5
+y = 2
+print(2 * (x > y))
+j = (x > y) + (x==y) + (y > x)
+print(j)
+
+print('\n---- A Couple of Boolean Operators ----')
+print((x > y) | (y > x))
+print((x > y) & (y > x))
+print((x > y) | (x==y))
+print(not (x==y))
+print((x > y) | (-1 * (x==y))==True)
