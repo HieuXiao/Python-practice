@@ -180,8 +180,67 @@ for n in range(90, 720, 90):
 # =================== Conversion functions ====================
 print('\n=================== Conversion functions ====================')
 print(type(5.23))
-print(type(str(5.278)))  #Converts a number to a string.
-print(type( int("4") ))
-print(type( int(float("4.17")) ))
+print(type(str(5.278)))  # Converts a number to a string.
+print(type(int("4")))
+print(type(int(float("4.17"))))
 # ❌ int("4.17") - lỗi vì "4.17" không phải chuỗi biểu diễn số nguyên hợp lệ
 
+
+'''
+========================  1.4. Character Strings =================================
+'''
+# ====== Some common string methods ======
+print('\n======  Some common string methods ======')
+s = "the science of where"
+print('Capitalize: ', s.capitalize())
+print('Capitalize + isupper: ', s.capitalize().isupper())
+print('Upper: ', s.upper())
+print('Upper + IsUpper: ', s.upper().isupper())
+print('Split: ', s.split(" "))
+
+# ======  String indices ======
+print('\n====== String indices ======')
+print(s[0])
+s1 = s[1]
+print(s1)
+print(s[2])
+print(s[-5:])
+print(s[4:11])
+print(s.split(" ")[1])
+
+# ====== String splitting and using len() ======
+print('\n====== String splitting and using len() ======')
+words = s.split(" ")
+print(words[len(words) - 1])
+print(len(words[len(words) - 1]))
+
+# ====== Concatenating strings ======
+print('\n====== Concatenating strings ======')
+print(words[3] + words[1])
+print(words[3] + " " + words[1])
+
+# ====== The escape character \ ======
+print('\n====== The escape character \\ ======')
+print('Jerry\'s Kids')
+print('\nJerry\'s\nKids')
+print("Jerry\"s Kids")
+print('\nd:\\work\\soil.shp')
+
+# ====== Including quotation marks in a string ======
+print('\n====== Including quotation marks in a string ======')
+selstr1 = '"elev" > 1000'
+selstr2 = "\"elev\" > 1000"
+selstr3 = """"elev" > 1000"""
+print(selstr1 + "\n" + selstr2 + "\n" + selstr3)
+
+# ====== Using positions in strings ======
+print('\n====== Using positions in strings ======')
+p = 'd:/work/lu.shp'
+print(p.find('.'))
+print(p[p.find('.'):])
+print(p.split("/"))
+
+# ====== Raw strings for dealing with backslashes ======
+print('\n====== Raw strings for dealing with backslashes ======')
+print(r'd:\work\soil.shp')
+print("Jerry's Kids")
