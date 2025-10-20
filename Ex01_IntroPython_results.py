@@ -40,7 +40,7 @@ msg = "Hello"
 path = "c:/py/data"
 aList = [5, 7.83, "Fred"]
 list = [x, msg, path, 2.7, aList]
-print (list)
+print(list)
 print(list[0])
 print(list[0:3])
 
@@ -62,7 +62,6 @@ print(Addresses[1][1])
 print(Addresses[2][3])
 print("\n")
 
-
 # ===append vs extend===
 Pacific = ['AK', 'CA', 'OR', 'WA']
 Desert = ['AZ', 'NV', 'UT']
@@ -83,3 +82,72 @@ for i in range(20):
 print(mylist)
 mylist.sort()
 print(mylist)
+
+# ===Counting lists===
+from random import random as rnd
+
+mylist = []
+for i in range(20):
+    mylist.append(int(rnd() * 10))
+print('\nRandom list: ', mylist)
+for i in range(10):
+    print("frequency of {}: {}".format(i, mylist.count(i)))
+
+# === Tuple ===
+mytuple1 = 5, 7, "name", 8
+mytuple2 = (5, 7, "name", 8)
+print("Fist tuple: ", mytuple1)
+print("Second tuple: ", mytuple2)
+
+a1 = (1212, "First St", "SF", "CA")
+a2 = (2323, "Second St", "Seattle", "WA")
+a3 = (3434, "Third St", "Denver", "CO")
+Addresses = []
+Addresses.append(a1)
+Addresses.append(a2)
+Addresses.append(a3)
+print('\nAddresses: ', Addresses)
+print('Designated address: ', Addresses[1][1])
+
+# === Dictionaries ===
+CA = {
+    "name": "California",
+    "capital": "Sacramento",
+    "areakm2": 423970,
+    "population": 39538223
+}
+print('\nCA len: ', len(CA))
+print('CA: ', CA)
+
+GROVELAND = {"ELEVATION": 853,
+             "LATITUDE": 37.8444,
+             "LONGITUDE": -120.2258,
+             "PRECIPITATION": 176.02
+             }
+print('\nGROVELAND len: ', len(GROVELAND))
+print('GROVELAND: ', GROVELAND)
+
+PRECIPITATION = {"GROVELAND": 176.02,
+                 "LEE VINING": 71.88,
+                 "PLACERVILLE": 170.69}
+print('\n', PRECIPITATION["PLACERVILLE"])
+print('Origin precipitation: ', PRECIPITATION)
+PRECIPITATION["BRIDGEPORT"] = 41.4
+print('After change preciptation: ', PRECIPITATION)
+
+print("\n----PRECIPITATION----")
+PRECIPITATION.keys()
+for station in PRECIPITATION.keys():
+    print(PRECIPITATION[station])
+print(PRECIPITATION.keys())
+print( GROVELAND.keys())
+
+'''
+==================1.3 Mathematical Computation Using Operators=================================
+'''
+# ========= Arithmetic operators ============
+print('\n========= Arithmetic operators ============')
+x = 2 + 3
+y = 2. + 3
+z = 2 - 3
+print(type(x),' - ', type(y),' - ', type(z))
