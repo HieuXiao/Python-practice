@@ -140,7 +140,7 @@ PRECIPITATION.keys()
 for station in PRECIPITATION.keys():
     print(PRECIPITATION[station])
 print(PRECIPITATION.keys())
-print( GROVELAND.keys())
+print(GROVELAND.keys())
 
 '''
 ==================1.3 Mathematical Computation Using Operators=================================
@@ -150,4 +150,38 @@ print('\n========= Arithmetic operators ============')
 x = 2 + 3
 y = 2. + 3
 z = 2 - 3
-print(type(x),' - ', type(y),' - ', type(z))
+print('Check type:', type(x), ' - ', type(y), ' - ', type(z))
+
+m = 2 * 3
+print('\nResult: ', m)
+print('Type: ', type(m))
+
+print('\nDivide')
+print(1 / 2)
+print(1. / 2)
+print(4 / 2)
+
+print('\n=== Power ===')
+print(5 ** 2)
+print(5 ** 2.0)
+
+print('\n=== Square root ===')
+print(25 ** (1 / 2))
+print(25 ** 0.5)
+
+print('\n=== Modulo ===')
+print("modulus = 10")
+for n in range(2, 14, 2):
+    print(n, n % 10)  # 10 might be a common repeated value
+print("modulus = 360, for compass azimuth (°)")
+for n in range(90, 720, 90):
+    print(n, n % 360)  # Compass azimuth (°) is a good application of modulos in a cycle.15
+
+# =================== Conversion functions ====================
+print('\n=================== Conversion functions ====================')
+print(type(5.23))
+print(type(str(5.278)))  #Converts a number to a string.
+print(type( int("4") ))
+print(type( int(float("4.17")) ))
+# ❌ int("4.17") - lỗi vì "4.17" không phải chuỗi biểu diễn số nguyên hợp lệ
+
